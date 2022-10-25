@@ -1,0 +1,40 @@
+<div class="container">
+  <div>
+    <h2>Ajouter un Produit :</h2>
+  </div>
+  <div class="shadow mt-2 p-2">
+    <form>
+      <div hidden class="col-sm-12 col-md-12 col-lg-6">
+        <label>ID Produit</label>
+        <input type="text" [(ngModel)]="newProduit.idProduit" name="idProduit" class="form-control">
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-6">
+        <label>Nom Produit</label>
+        <input type="text" [(ngModel)]="newProduit.nomProduit" name="nomProduit" class="form-control">
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-6">
+        <label>Prix Produit</label>
+        <input type="number" [(ngModel)]="newProduit.prixProduit" name="prixProduit" class="form-control">
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-6">
+        <label>Date création</label>
+        <input type="date" [(ngModel)]="newProduit.dateCreation" name="dateCreation" class="form-control">
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-6">
+        <label>Catégorie</label>
+        <select class="form-control form-control-lg" id="idCat" name="idCat" [(ngModel)]="newIdCat">
+          <option *ngFor="let cat of categories" [value]="cat.idCat">
+            {{cat.nomCat}}
+          </option>
+        </select>
+      </div>
+      <div class=" mt-2">
+        <button type="submit" (click)="ajouterProduit()" class="btn btn-success">Ajouter</button>
+        <div>
+          <h3 class="text-success shadow mt-2">{{message}}</h3>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>

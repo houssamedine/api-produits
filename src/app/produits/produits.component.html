@@ -1,0 +1,41 @@
+<div class="contanier">
+  <p class="text-center mt-2 text-success h4">Page Des Produits</p>
+</div>
+
+
+<div class="contanier mt-4">
+  <div class="card shadow mb-4">
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th class="text-primary">Liste des Produits</th>
+          </tr>
+          <tr>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Prix</th>
+            <th>Date Création</th>
+            <th>Catégorie</th>
+            <th colspan="2" class="text-center">Action</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let produit of produits">
+          <tr>
+            <td>{{produit.idProduit}}</td>
+            <td>{{produit.nomProduit}}</td>
+            <td>{{produit.prixProduit}}</td>
+            <td>{{produit.dateCreation |date:"dd/MM/yyyy"}}</td>
+            <td>{{produit.categories?.nomCat}}</td>
+            <td>
+              <button class="btn btn-danger m-1" (click)="supprimerProduit(produit)">Supprimer</button>
+            </td>
+            <td>
+              <button class="btn btn-success m-1" [routerLink]="['/updateProduit',produit.idProduit]">Modifier</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

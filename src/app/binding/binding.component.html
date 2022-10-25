@@ -1,0 +1,20 @@
+<h3>String Interpolation</h3>
+<p>Objectif: {{title}}</p>
+
+<hr style="width: 50%">
+
+<h3>Property Binding</h3>
+<button [disabled]="status">Cliquer Ici</button>
+
+<hr style="width: 50%">
+
+<h3>Event Binding</h3>
+<button (click)="changerTitre()">Cliquer</button>
+
+<hr style="width: 50%">
+
+<h3>Two Way Binding</h3>
+<p>1ére: Import FormModule in app.module.ts</p>
+
+<input type="text" [(ngModel)]="nom"/>
+<h4>Bonjour {{nom}}</h4>
