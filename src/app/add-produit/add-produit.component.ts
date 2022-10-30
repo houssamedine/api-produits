@@ -27,7 +27,7 @@ export class AddProduitComponent implements OnInit {
   }
 
   ajouterProduit() {
-    this.newProduit.categories = this.categories.find(
+    this.newProduit.categorie = this.categories.find(
       (cat) => cat.idCat == this.newIdCat
     )!;
     this.produitService.addProduit(this.newProduit).subscribe((prods) => {

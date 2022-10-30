@@ -5,5 +5,5 @@ export class Produits {
   nomProduit!: string;
   prixProduit!: number;
   dateCreation!: Date;
-  categories!: Categories;
+  categorie!: Categories;
 }

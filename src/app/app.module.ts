@@ -11,6 +11,7 @@ import { UpdateProduitComponent } from './update-produit/update-produit.componen
 import { CategoriesComponent } from './categories/categories.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { LoginComponent } from './login/login.component';
     UpdateProduitComponent,
     CategoriesComponent,
     LoginComponent,
+    ForbiddenComponent,
   ],
   imports: [
     BrowserModule,

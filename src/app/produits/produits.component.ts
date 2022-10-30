@@ -1,3 +1,4 @@
+import { AuthService } from './../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Produits } from '../models/produit.model';
@@ -11,7 +12,11 @@ import { ProduitService } from '../services/produits.service';
 export class ProduitsComponent implements OnInit {
   produits!: Produits[];
 
-  constructor(private router: Router, private produitService: ProduitService) {}
+  constructor(
+    public authService: AuthService,
+    private router: Router,
+    private produitService: ProduitService
+  ) {}
 
   ngOnInit(): void {
     this.chagerProduit();
